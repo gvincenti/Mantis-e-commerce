@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "root",
+    "password": "DqoRDngZYJHBrypaZOOitVVLYoTdIivh",
+    "database": "railway",
+    "host": "roundhouse.proxy.rlwy.net",
+    "port": 15764,
+    "dialect": "mysql"
+  }
+}

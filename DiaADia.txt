@@ -1,0 +1,17 @@
+ESTE ARCHIVO ES EL APORTE DIARIO QUE CADA UNO HARÁ EN EL PROYECTO:
+La plantilla se modificará acorde a como es nuestro proyecto. (leer proyecto.txt)
+
+Gonzalo dia1:
+Creacion de la plantilla y organización.
+
+
+Gonzalo dia2:
+Adaptando código de Gonza así ya está todo configurado para crear la base de datos y 
+adaptando todo para el testeo y creación del archivo "mantis.sql" así se tiene referencia 
+para crear la tabla y su contenido.
+
+HAY QUE CREAR UNA 3CER TABLA QUE SEA PRODUCTOS DESTACADOS QUE TOME EL ID DE EL PRODUCTO A 
+DESTACAR Y LO USE PARA TENER EN LA TABLA DE DESTAVADOS ASÍ DESPUÉS SE ACOPLA CON EL FORNT-END
+
+CUALQUIER COSA PREGUNTEN.
+SUERTE.
