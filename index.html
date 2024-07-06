@@ -363,9 +363,9 @@
               <div class="form-control">
                 <h2>Hello Again!</h2>
                 <p>Welcome back you've been missed.</p>
-                <input type="text" placeholder="Enter Username" />
+                <input type="text" name="username" placeholder="Enter Username" />
                 <div>
-                  <input type="password" placeholder="Password" />
+                  <input type="password" name="password" placeholder="Password" />
                   <div class="icon form-icon">
                     <!-- <img src="./images/eye.svg" alt="" /> -->
                   </div>
@@ -403,7 +403,7 @@
                 <span data-id="#1a1aff">Login now</span>
               </p>
             </div>
-            <form action="">
+            <form action="routes/auth/authRouter.js" method="POST">
               <div class="form-control">
                 <h2>Welcome Codevo!</h2>
                 <p>It's good to have you.</p>
