@@ -1,9 +1,9 @@
-// app.js
 require('dotenv').config(); // Cargar variables de entorno
 const express = require('express');
 const sequelize = require('../db/db'); // Importar la conexión a la base de datos
 const path = require('path');
 const app = express();
+
 
 // Configurar Sequelize con las variables de entorno
 const port = process.env.PORT || 3000;
@@ -21,6 +21,9 @@ app.use(express.json());
 app.use('/auth', authRouter);
 app.use('/users', userRoutes); // Quitar el middleware aquí para permitir registro de usuarios sin autenticación
 app.use('/products', productRoutes);
+
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Middleware para servir archivos estáticos desde la carpeta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
