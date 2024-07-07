@@ -25,7 +25,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
       alert('Inicio de sesión exitoso');
       
       // Actualizar el DOM con el mensaje de bienvenida
-      document.getElementById('welcomeMessage').innerText = `Bienvenido, ${decodedToken.email}`;
+      document.getElementById('welcomeMessage').innerText = `Bienvenido, ${decodedToken.name}`;
       
       // Opcional: almacenar el token en localStorage para usarlo en otras partes de la aplicación
       localStorage.setItem('token', token);
