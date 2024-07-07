@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Middleware para servir archivos estáticos desde la carpeta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
-console.log('ACCESS_TOKEN_SECRET:', process.env.ACCESS_TOKEN_SECRET);
+//console.log('ACCESS_TOKEN_SECRET:', process.env.ACCESS_TOKEN_SECRET);
 
 // Sincronizar el modelo User y luego iniciar el servidor
 sequelize.sync().then(() => {
