@@ -2,6 +2,7 @@ require('dotenv').config(); // Cargar variables de entorno
 const express = require('express');
 const sequelize = require('../db/db'); // Importar la conexión a la base de datos
 const path = require('path');
+const cors = require('cors');
 const app = express();
 
 
@@ -16,7 +17,7 @@ const productRoutes = require('../routes/product/productRouter');
 
 // Middleware para parsear JSON
 app.use(express.json());
-
+app.use(cors());
 // Usar rutas
 app.use('/auth', authRouter);
 app.use('/users', userRoutes); // Quitar el middleware aquí para permitir registro de usuarios sin autenticación
