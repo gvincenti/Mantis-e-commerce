@@ -1,7 +1,7 @@
 # railway.toml
 
 [env]
-RAILWAY_GIT_BRANCH = "main"  # Reemplaza con tu rama Git si es diferente
+RAILWAY_GIT_BRANCH = "master"  # Reemplaza con tu rama Git si es diferente
 
 [services]
   [services.default]
