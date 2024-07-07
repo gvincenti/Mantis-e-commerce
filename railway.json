@@ -1,0 +1,9 @@
+{
+    "services": {
+      "default": {
+        "buildCommand": "npm install && npm run build",
+        "startCommand": "node js/app.js"
+      }
+    }
+  }
+  
