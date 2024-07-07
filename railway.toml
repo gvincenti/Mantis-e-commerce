@@ -5,8 +5,6 @@ RAILWAY_GIT_BRANCH = "main"  # Reemplaza con tu rama Git si es diferente
 
 [services]
   [services.default]
-    # Aquí configuramos cómo se ejecuta la aplicación
-    # Cambia el comando y la ruta según tu estructura
     command = "node js/app.js"  # Ruta correcta a tu app.js
     internal_port = 3000  # Puerto interno donde corre tu aplicación
 
