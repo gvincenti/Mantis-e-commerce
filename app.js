@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Ruta raíz
 app.get('/', (req, res) => {
-  res.send('Bienvenido a la API de Mantis!');
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Sincronizar el modelo User y luego iniciar el servidor
