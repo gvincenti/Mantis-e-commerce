@@ -5,7 +5,6 @@ const path = require('path');
 const cors = require('cors');
 const app = express();
 
-
 // Configurar Sequelize con las variables de entorno
 const port = process.env.PORT || 3000;
 
@@ -18,17 +17,19 @@ const productRoutes = require('./routes/product/productRouter');
 // Middleware para parsear JSON
 app.use(express.json());
 app.use(cors());
+
 // Usar rutas
 app.use('/auth', authRouter);
 app.use('/users', userRoutes); // Quitar el middleware aquí para permitir registro de usuarios sin autenticación
 app.use('/products', productRoutes);
 
-
-app.use(express.static(path.join(__dirname, 'public')));
-
 // Middleware para servir archivos estáticos desde la carpeta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
-//console.log('ACCESS_TOKEN_SECRET:', process.env.ACCESS_TOKEN_SECRET);
+
+// Ruta raíz
+app.get('/', (req, res) => {
+  res.send('Bienvenido a la API de Mantis!');
+});
 
 // Sincronizar el modelo User y luego iniciar el servidor
 sequelize.sync().then(() => {
