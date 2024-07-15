@@ -1,0 +1,3 @@
+services:
+  web:
+    startCommand: node src/app.js
