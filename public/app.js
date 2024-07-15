@@ -1,6 +1,6 @@
 require('dotenv').config(); // Cargar variables de entorno
 const express = require('express');
-const sequelize = require('../db/db'); // Importar la conexión a la base de datos
+const sequelize = require('../db/db'); // Ajusta la ruta según tu estructura
 const path = require('path');
 const cors = require('cors');
 const app = express();
@@ -9,10 +9,10 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Importar rutas
-const authenticateToken = require('../middleware/authenticateToken');
-const authRouter = require('../routes/auth/authRouter');
-const userRoutes = require('../routes/user/userRouter');
-const productRoutes = require('../routes/product/productRouter');
+const authenticateToken = require('../middleware/authenticateToken'); // Ajusta la ruta según tu estructura
+const authRouter = require('../routes/auth/authRouter'); // Ajusta la ruta según tu estructura
+const userRoutes = require('../routes/user/userRouter'); // Ajusta la ruta según tu estructura
+const productRoutes = require('../routes/product/productRouter'); // Ajusta la ruta según tu estructura
 
 // Middleware para parsear JSON
 app.use(express.json());
@@ -23,7 +23,7 @@ app.use('/auth', authRouter);
 app.use('/users', userRoutes); // Quitar el middleware aquí para permitir registro de usuarios sin autenticación
 app.use('/products', productRoutes);
 
-/// Middleware para servir archivos estáticos desde la carpeta 'public'
+// Middleware para servir archivos estáticos desde la carpeta 'public'
 app.use(express.static(path.join(__dirname)));
 
 // Ruta raíz
