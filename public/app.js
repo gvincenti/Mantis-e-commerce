@@ -23,12 +23,12 @@ app.use('/auth', authRouter);
 app.use('/users', userRoutes); // Quitar el middleware aquí para permitir registro de usuarios sin autenticación
 app.use('/products', productRoutes);
 
-// Middleware para servir archivos estáticos desde la carpeta 'public'
-app.use(express.static(path.join(__dirname, 'public')));
+/// Middleware para servir archivos estáticos desde la carpeta 'public'
+app.use(express.static(path.join(__dirname)));
 
 // Ruta raíz
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Sincronizar el modelo User y luego iniciar el servidor
