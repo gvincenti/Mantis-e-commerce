@@ -1,6 +1,6 @@
 require('dotenv').config(); // Cargar variables de entorno
 const express = require('express');
-const sequelize = require('./db/db'); // Importar la conexión a la base de datos
+const sequelize = require('../db/db'); // Importar la conexión a la base de datos
 const path = require('path');
 const cors = require('cors');
 const app = express();
@@ -9,10 +9,10 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Importar rutas
-const authenticateToken = require('./middleware/authenticateToken');
-const authRouter = require('./routes/auth/authRouter');
-const userRoutes = require('./routes/user/userRouter');
-const productRoutes = require('./routes/product/productRouter');
+const authenticateToken = require('../middleware/authenticateToken');
+const authRouter = require('../routes/auth/authRouter');
+const userRoutes = require('../routes/user/userRouter');
+const productRoutes = require('../routes/product/productRouter');
 
 // Middleware para parsear JSON
 app.use(express.json());
